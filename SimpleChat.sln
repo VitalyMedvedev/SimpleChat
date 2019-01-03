@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{AFE91561-1A98-4E75-83D0-D727B00956DF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{6C332D71-CC6F-4D69-BCF7-39921FEC65BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tinkoff.Infrastructure.Redis", "Tinkoff.Infrastructure.Redis\Tinkoff.Infrastructure.Redis.csproj", "{F590AD17-9C3D-410C-BA0A-7E49C022C180}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tinkoff.Infrastructure.Core", "Tinkoff.Infrastructure.Core\Tinkoff.Infrastructure.Core.csproj", "{56B3357E-80FD-4CAB-91B2-F6394348BAE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tinkoff.Service.SimpleChat", "Tinkoff.Service.SimpleChat\Tinkoff.Service.SimpleChat.csproj", "{FBBE2F20-DC21-4431-BC91-7E42B45AFB7F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{4EE980EA-8421-43F3-BF5E-BFDF4E9E7000}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tinkoff.Application.ConsoleSimpleChat", "Tinkoff.Application.ConsoleSimpleChat\Tinkoff.Application.ConsoleSimpleChat.csproj", "{7908ED6C-807D-49CA-BFA7-94584BA96381}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F590AD17-9C3D-410C-BA0A-7E49C022C180}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F590AD17-9C3D-410C-BA0A-7E49C022C180}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F590AD17-9C3D-410C-BA0A-7E49C022C180}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F590AD17-9C3D-410C-BA0A-7E49C022C180}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56B3357E-80FD-4CAB-91B2-F6394348BAE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56B3357E-80FD-4CAB-91B2-F6394348BAE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56B3357E-80FD-4CAB-91B2-F6394348BAE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56B3357E-80FD-4CAB-91B2-F6394348BAE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBBE2F20-DC21-4431-BC91-7E42B45AFB7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBBE2F20-DC21-4431-BC91-7E42B45AFB7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBBE2F20-DC21-4431-BC91-7E42B45AFB7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBBE2F20-DC21-4431-BC91-7E42B45AFB7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7908ED6C-807D-49CA-BFA7-94584BA96381}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7908ED6C-807D-49CA-BFA7-94584BA96381}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7908ED6C-807D-49CA-BFA7-94584BA96381}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7908ED6C-807D-49CA-BFA7-94584BA96381}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F590AD17-9C3D-410C-BA0A-7E49C022C180} = {6C332D71-CC6F-4D69-BCF7-39921FEC65BB}
+		{56B3357E-80FD-4CAB-91B2-F6394348BAE7} = {6C332D71-CC6F-4D69-BCF7-39921FEC65BB}
+		{FBBE2F20-DC21-4431-BC91-7E42B45AFB7F} = {AFE91561-1A98-4E75-83D0-D727B00956DF}
+		{7908ED6C-807D-49CA-BFA7-94584BA96381} = {4EE980EA-8421-43F3-BF5E-BFDF4E9E7000}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F5ADC21F-1AA2-4899-A572-4312326B96E1}
+	EndGlobalSection
+EndGlobal
