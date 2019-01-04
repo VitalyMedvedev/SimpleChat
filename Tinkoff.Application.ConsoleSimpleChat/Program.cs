@@ -24,7 +24,7 @@ namespace Tinkoff.Application.ConsoleSimpleChat
             {
                 if (!wasJoined)
                 {
-                    service.JoinChatRoom(ChatChannel, _userName, Console.WriteLine);
+                    service.JoinChatRoom(ChatChannel, _userName, Console.WriteLine).Wait();
                     wasJoined = true;
                 }
                 var message = Console.ReadLine();
