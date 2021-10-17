@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.168
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{AFE91561-1A98-4E75-83D0-D727B00956DF}"
 EndProject
@@ -16,6 +16,11 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{4EE980EA-8421-43F3-BF5E-BFDF4E9E7000}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tinkoff.Application.ConsoleSimpleChat", "Tinkoff.Application.ConsoleSimpleChat\Tinkoff.Application.ConsoleSimpleChat.csproj", "{7908ED6C-807D-49CA-BFA7-94584BA96381}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D4F12E0E-375F-4569-9C7C-2A826BF02F64}"
+	ProjectSection(SolutionItems) = preProject
+		JobRequirements.txt = JobRequirements.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
