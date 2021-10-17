@@ -21,7 +21,7 @@ namespace Tinkoff.Service.SimpleChat
             await _cacheStore.SubscribeAsync(channel, subHandler);
             var history = await _cacheStore.GetAllAsync($"{PrefixKey}*");
             subHandler(string.Join("\n", history));
-            await _cacheStore.PublishAsync(channel, $"'{userName}' joined the chat room.");
+            await _cacheStore.PublishAsync(channel, $"'{userName}' joined the chat room.").ConfigureAwait(false);
         }
 
         /// <inheritdoc />
@@ -29,8 +29,8 @@ namespace Tinkoff.Service.SimpleChat
         {
             var key = $"{PrefixKey}{DateTime.Now}";
             var fullMessage = $"{userName}: {message} ({DateTime.Now.Hour}:{DateTime.Now.Minute})";
-            await _cacheStore.SetAsync(key, fullMessage);
-            await _cacheStore.PublishAsync(channel, fullMessage);
+            await _cacheStore.SetAsync(key, fullMessage).ConfigureAwait(false);
+            await _cacheStore.PublishAsync(channel, fullMessage).ConfigureAwait(false);
         }
 
         /// <inheritdoc />

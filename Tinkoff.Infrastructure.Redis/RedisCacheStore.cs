@@ -28,25 +28,25 @@ namespace Tinkoff.Infrastructure.Redis
         /// <inheritdoc />
         public async Task SubscribeAsync(string channel, Action<string> handler)
         {
-            await _subscriber.SubscribeAsync(channel, (channelValue, message) => handler(message));
+            await _subscriber.SubscribeAsync(channel, (channelValue, message) => handler(message)).ConfigureAwait(false);
         }
 
         /// <inheritdoc />
         public async Task PublishAsync(string channel, string message)
         {
-            await _subscriber.PublishAsync(channel, message);
+            await _subscriber.PublishAsync(channel, message).ConfigureAwait(false);
         }
 
         /// <inheritdoc />
         public async Task SetAsync(string key, string value, TimeSpan? expiry = null)
         {
-            await _database.StringSetAsync(key, value, expiry ?? _settings.Expiry);
+            await _database.StringSetAsync(key, value, expiry ?? _settings.Expiry).ConfigureAwait(false);
         }
 
         /// <inheritdoc />
         public async Task<string> GetAsync(string key)
         {
-            var result = await _database.StringGetAsync(key);
+            var result = await _database.StringGetAsync(key).ConfigureAwait(false);
             return result;
         }
 
@@ -58,7 +58,7 @@ namespace Tinkoff.Infrastructure.Redis
             var sortKeys = keys.OrderBy(x => x.ToString()).ToList();
             foreach(var key in sortKeys)
             {
-                result.Add(await GetAsync(key));
+                result.Add(await GetAsync(key).ConfigureAwait(false));
             }
             return result;
         }
