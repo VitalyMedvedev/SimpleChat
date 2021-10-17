@@ -16,7 +16,7 @@ namespace Tinkoff.Service.SimpleChat
         }
 
         /// <inheritdoc />
-        public async Task JoinChatRoom(string channel, string userName, Action<string> subHandler)
+        public async Task JoinChatRoomAsync(string channel, string userName, Action<string> subHandler)
         {
             await _cacheStore.SubscribeAsync(channel, subHandler);
             var history = await _cacheStore.GetAllAsync($"{PrefixKey}*");
@@ -25,7 +25,7 @@ namespace Tinkoff.Service.SimpleChat
         }
 
         /// <inheritdoc />
-        public async Task MessageExchange(string channel, string userName, string message)
+        public async Task MessageExchangeAsync(string channel, string userName, string message)
         {
             var key = $"{PrefixKey}{DateTime.Now}";
             var fullMessage = $"{userName}: {message} ({DateTime.Now.Hour}:{DateTime.Now.Minute})";

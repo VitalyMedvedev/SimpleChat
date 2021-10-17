@@ -24,11 +24,11 @@ namespace Tinkoff.Application.ConsoleSimpleChat
             {
                 if (!wasJoined)
                 {
-                    service.JoinChatRoom(ChatChannel, _userName, Console.WriteLine).Wait();
+                    service.JoinChatRoomAsync(ChatChannel, _userName, Console.WriteLine).Wait();
                     wasJoined = true;
                 }
                 var message = Console.ReadLine();
-                service.MessageExchange(ChatChannel, _userName, message).Wait();
+                service.MessageExchangeAsync(ChatChannel, _userName, message).Wait();
             }
         }
 

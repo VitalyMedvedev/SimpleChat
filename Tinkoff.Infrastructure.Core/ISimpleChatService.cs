@@ -16,7 +16,7 @@ namespace Tinkoff.Infrastructure.Core
         /// <param name="userName"></param>
         /// <param name="subHandler"></param>
         /// <returns></returns>
-        Task JoinChatRoom(string channel, string userName, Action<string> subHandler);
+        Task JoinChatRoomAsync(string channel, string userName, Action<string> subHandler);
 
         /// <summary>
         /// The method that implements the logic of messaging
@@ -25,6 +25,6 @@ namespace Tinkoff.Infrastructure.Core
         /// <param name="userName"></param>
         /// <param name="message"></param>
         /// <returns></returns>
-        Task MessageExchange(string channel, string userName, string message);
+        Task MessageExchangeAsync(string channel, string userName, string message);
     }
 }
